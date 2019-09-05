@@ -1,7 +1,7 @@
 # createEL
 HTML is a XML like language structured as a tree. Sometimes HTML gets quite unmanageable. This is a Javascript library by which one can easily generate HTML code by writing only javascript. Built with TypeScript.  
 
-Javascript:
+**Javascript:**
 
 ```javascript
   //Navbar
@@ -34,7 +34,7 @@ Javascript:
   })
  ```
   
-  HTML:
+  **HTML:**
   ```html
   <div id="container" class="container">
     <p>This is my first CreatEL App!</p>
