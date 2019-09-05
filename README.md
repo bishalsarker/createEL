@@ -3,6 +3,7 @@ HTML is a XML like language structured as a tree. Sometimes HTML gets quite unma
 
 Javascript:
 
+``
   //Navbar
   var nav = create.Nav({ class: "nav-bar" });
   register(nav);
@@ -31,10 +32,10 @@ Javascript:
       var val = select.el(txtBox).getValue();
       create.ListItem({ text: val, parent: nameList });
   })
-  
+ ``
   
   HTML:
-  
+  ``
   <div id="container" class="container">
     <p>This is my first CreatEL App!</p>
     <p>Please enter your name in the textbox below to add in list...</p>
@@ -47,4 +48,4 @@ Javascript:
       <li>bishal</li>
     </ul>
   </div>
-    
+ ``   
