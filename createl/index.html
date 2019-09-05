@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <script src="createl.js"></script>
+    <link href="app.css" rel="stylesheet" />
+    <style>
+        body{
+            margin: 0;
+        }
+        .nav-bar {
+            padding: 10px;
+            width: 100%;
+            background-color: brown;
+            color: azure;
+        }
+
+        .container {
+            margin: 5%;
+        }
+
+        .tbl-border {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //Navbar
+        var nav = create.Nav({ class: "nav-bar" });
+        register(nav);
+        create.Heading({ text: "Greeter", size: 1, parent: nav});
+
+        //Container
+        var container = create.Div({ id: "container", class: "container" });
+        register(container);
+
+        //Description
+        create.Paragraph({ text: "This is my first CreatEL App!", parent: container });
+        create.Paragraph({ text: "Please enter your name in the textbox below to add in list...", parent: container });
+
+        //Form
+        var myForm = create.Div({ id:"nameForm", parent: container });
+        var txtBox = create.Input({ type: "text", name: "n", placeholder: "Enter your name...", parent: myForm });
+        var btn = create.Button({ type: "button", text: "Add", parent: myForm });
+
+        //List
+        create.Heading({ text: "Name List", size: 3, parent: container });
+        var nameList = create.List({ parent: container });
+        create.ListItem({ text: "bishal", parent: nameList });
+
+        //Function
+        select.el(btn).addAction("click", function () {
+            var val = select.el(txtBox).getValue();
+            create.ListItem({ text: val, parent: nameList });
+        })
+    </script>
+</body>
+</html>
